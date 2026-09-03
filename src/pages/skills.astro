@@ -56,9 +56,9 @@ const skillsData = [
   },
   {
     index: '06',
-    category: 'Data & ML',
+    category: 'Machine Learning & AI',
     note: 'Applied machine learning — training and shipping models that drive product features.',
-    skills: ['Python', 'scikit-learn', 'Applied Machine Learning', 'Statistics'],
+    skills: ['Python', 'scikit-learn', 'Applied ML model training', 'LLMs'],
   },
   {
     index: '07',
@@ -70,7 +70,24 @@ const skillsData = [
     index: '08',
     category: 'Tools & Platforms',
     note: 'Where the code is written, deployed, paid for, and kept alive.',
-    skills: ['Git', 'GitHub', 'Postman', 'Linux', 'VS Code', 'Vercel', 'Render', 'AWS', 'Razorpay'],
+    skills: [
+      'Git',
+      'GitHub',
+      'Postman',
+      'Linux',
+      'VS Code',
+      'Vercel',
+      'Render',
+      'AWS Amplify',
+      'AWS EC2',
+      'Razorpay',
+    ],
+  },
+  {
+    index: '09',
+    category: 'Currently learning',
+    note: 'Extending the same end-to-end approach to mobile — first app in development.',
+    skills: ['Android', 'iOS', 'Mobile development'],
   },
 ];
 
@@ -79,7 +96,7 @@ const allSkills = [...new Set(skillsData.flatMap((c) => c.skills))];
 
 <PageLayout
   title="Skills & Technologies — Awadh Kishor Singh"
-  description="The full tech stack of Awadh Kishor Singh — React, Next.js, TypeScript, Node.js, Express, NestJS, MongoDB, PostgreSQL, Python, and the tools behind production web apps."
+  description="The full tech stack of Awadh Kishor Singh — React, Next.js, TypeScript, Node.js, Express, NestJS, MongoDB, PostgreSQL, Python, scikit-learn, AWS, and the tools behind production web apps."
 >
   <section class="wrap pt-14 md:pt-24">
     <span class="eyebrow reveal reveal-1">Skills</span>
