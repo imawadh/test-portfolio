@@ -20,7 +20,7 @@ const { index, date, title, issuer, details, url } = Astro.props;
   <span class="font-mono text-[0.66rem] tracking-[0.19em] text-[var(--muted)]">{index}</span>
 
   <div class="min-w-0">
-    <h3 class="m-0 text-xl decoration-1 underline-offset-[6px] group-hover:underline">
+    <h3 class="m-0 text-xl transition-colors duration-200 group-hover:text-[var(--accent)]">
       {title}
     </h3>
     <p class="m-0 mt-1 text-[0.95rem] font-medium text-[var(--fg-dim)]">{issuer}</p>

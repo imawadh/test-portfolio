@@ -34,13 +34,13 @@
   --fg-dim: #40464e;
   --muted: #7b828b;
 
-  /* ── ACCENT — monochrome: emphasis comes from ink, weight and italics ── */
-  --accent: #14161a;
-  --accent-2: #000000;
-  --accent-soft: #eceef0;
+  /* ── ACCENT (cobalt) — micro-labels, links, primary action ── */
+  --accent: #1d4ed8;
+  --accent-2: #1e40af;
+  --accent-soft: #e8edfb;
 
-  /* ── SIGNAL — live / available status ── */
-  --signal: #14161a;
+  /* ── SIGNAL — live / available status; one hue, so it reuses the accent ── */
+  --signal: #1d4ed8;
 
   /* ── TYPE ── */
   --font-display: 'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
@@ -78,14 +78,14 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(20, 22, 26, 0.045), transparent 70%),
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(29, 78, 216, 0.055), transparent 70%),
     radial-gradient(ellipse 70% 40% at 100% 100%, rgba(20, 22, 26, 0.03), transparent 70%);
   pointer-events: none;
 }
 
 ::selection {
   background: var(--accent);
-  color: var(--bg);
+  color: #fff;
 }
 
 /* ── SCROLLBAR ── */
@@ -293,7 +293,7 @@ code {
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent);
 }
 @media (min-width: 640px) {
   .spec-key {
@@ -369,17 +369,18 @@ code {
   white-space: nowrap;
 }
 .btn:hover {
-  background: var(--bg-2);
+  background: var(--fg);
+  color: var(--bg);
 }
 .btn-primary {
-  background: var(--fg);
-  border-color: var(--fg);
-  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
 .btn-primary:hover {
   background: var(--accent-2);
   border-color: var(--accent-2);
-  color: var(--bg);
+  color: #fff;
 }
 .btn-ghost {
   border-color: var(--border-bright);
@@ -394,7 +395,7 @@ code {
 /* ── INLINE LINK ── */
 .link {
   color: var(--accent);
-  border-bottom: 1px solid rgba(20, 22, 26, 0.28);
+  border-bottom: 1px solid rgba(29, 78, 216, 0.35);
   transition: border-color 0.2s ease;
 }
 .link:hover {
