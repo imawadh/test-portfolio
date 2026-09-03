@@ -42,7 +42,10 @@ const isWork = type === 'work';
   <!-- Right: the entry itself -->
   <div class="min-w-0 pb-4">
     <h3 class="m-0 text-2xl md:text-[1.7rem]">{title}</h3>
-    <p class="m-0 mt-1.5 text-[1.02rem] text-[var(--accent)]" style="font-family:var(--font-display);">
+    <p
+      class="m-0 mt-1.5 text-[1.02rem] font-medium text-[var(--fg)]"
+      style="font-family:var(--font-display);letter-spacing:-0.018em;"
+    >
       {company}
       <span class="text-[var(--muted)]">&mdash; {meta}</span>
     </p>
