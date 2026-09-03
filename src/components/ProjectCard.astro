@@ -22,9 +22,9 @@ const href = caseStudy ?? live ?? code ?? '#';
   >
     <span class="font-mono text-[0.66rem] tracking-[0.19em] text-[var(--muted)]">{index}</span>
     <span
-      class="inline-flex items-center gap-2 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-[var(--olive)]"
+      class="inline-flex items-center gap-2 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-[var(--signal)]"
     >
-      <span class="h-1.5 w-1.5 rounded-full bg-[var(--olive)]"></span>
+      <span class="h-1.5 w-1.5 rounded-full bg-[var(--signal)]"></span>
       {status}
     </span>
   </div>
@@ -32,7 +32,7 @@ const href = caseStudy ?? live ?? code ?? '#';
   <div class="flex flex-1 flex-col gap-4 p-6 md:p-7">
     <div>
       <h3 class="m-0 text-2xl">
-        <a href={href} class="transition-colors duration-200 group-hover:text-[var(--accent)]">
+        <a href={href} class="decoration-1 underline-offset-[6px] group-hover:underline">
           {name}
         </a>
       </h3>

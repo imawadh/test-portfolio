@@ -42,7 +42,7 @@ const mailtoCompose =
             channels.map((c) => (
               <div class="flex items-baseline justify-between gap-5 border-b border-[var(--border)] py-5">
                 <div class="min-w-0">
-                  <dt class="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-[var(--accent)]">
+                  <dt class="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-[var(--muted)]">
                     {c.key}
                   </dt>
                   {c.href ? (
@@ -101,7 +101,7 @@ const mailtoCompose =
             </div>
             <div class="spec">
               <span class="spec-key">Status</span>
-              <span class="spec-val inline-flex items-center gap-2.5 text-[var(--olive)]">
+              <span class="spec-val inline-flex items-center gap-2.5 text-[var(--signal)]">
                 <span class="pulse"></span>
                 Accepting messages
               </span>

@@ -22,26 +22,25 @@
 
 :root {
   /* ── SURFACES ── */
-  --bg: #faf8f4;
-  --bg-2: #f3efe7;
+  --bg: #f7f8f9;
+  --bg-2: #eef0f2;
   --surface: #ffffff;
-  --surface-2: #f7f4ee;
-  --border: #e4ded3;
-  --border-bright: #cdc3b4;
+  --surface-2: #f2f4f5;
+  --border: #e0e3e6;
+  --border-bright: #c3c8ce;
 
   /* ── INK ── */
-  --fg: #16130f;
-  --fg-dim: #4a423a;
-  --muted: #877d71;
+  --fg: #14161a;
+  --fg-dim: #40464e;
+  --muted: #7b828b;
 
-  /* ── ACCENT (rust) ── */
-  --accent: #a8432a;
-  --accent-2: #7f3120;
-  --accent-soft: #f6eae4;
+  /* ── ACCENT — monochrome: emphasis comes from ink, weight and italics ── */
+  --accent: #14161a;
+  --accent-2: #000000;
+  --accent-soft: #eceef0;
 
-  /* ── SUPPORTING ── */
-  --olive: #5f6b3f;
-  --gold: #9a7b2e;
+  /* ── SIGNAL — live / available status ── */
+  --signal: #14161a;
 
   /* ── TYPE ── */
   --font-display: 'Playfair Display', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
@@ -79,8 +78,8 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(168, 67, 42, 0.05), transparent 70%),
-    radial-gradient(ellipse 70% 40% at 100% 100%, rgba(95, 107, 63, 0.04), transparent 70%);
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(20, 22, 26, 0.045), transparent 70%),
+    radial-gradient(ellipse 70% 40% at 100% 100%, rgba(20, 22, 26, 0.03), transparent 70%);
   pointer-events: none;
 }
 
@@ -294,7 +293,7 @@ code {
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--muted);
 }
 @media (min-width: 640px) {
   .spec-key {
@@ -323,7 +322,7 @@ code {
 .card-link:hover {
   border-color: var(--fg);
   transform: translateY(-2px);
-  box-shadow: 0 18px 40px -28px rgba(22, 19, 15, 0.45);
+  box-shadow: 0 18px 40px -28px rgba(20, 22, 26, 0.45);
 }
 
 /* ── CHIP / TAG ── */
@@ -370,18 +369,17 @@ code {
   white-space: nowrap;
 }
 .btn:hover {
-  background: var(--fg);
-  color: var(--bg);
+  background: var(--bg-2);
 }
 .btn-primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
+  background: var(--fg);
+  border-color: var(--fg);
+  color: var(--bg);
 }
 .btn-primary:hover {
   background: var(--accent-2);
   border-color: var(--accent-2);
-  color: #fff;
+  color: var(--bg);
 }
 .btn-ghost {
   border-color: var(--border-bright);
@@ -389,14 +387,14 @@ code {
 }
 .btn-ghost:hover {
   border-color: var(--fg);
-  background: var(--fg);
-  color: var(--bg);
+  color: var(--fg);
+  background: var(--bg-2);
 }
 
 /* ── INLINE LINK ── */
 .link {
   color: var(--accent);
-  border-bottom: 1px solid rgba(168, 67, 42, 0.35);
+  border-bottom: 1px solid rgba(20, 22, 26, 0.28);
   transition: border-color 0.2s ease;
 }
 .link:hover {
@@ -425,7 +423,7 @@ code {
   position: absolute;
   inset: 0;
   border-radius: 99px;
-  background: var(--olive);
+  background: var(--signal);
   opacity: 0.55;
   animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
@@ -435,7 +433,7 @@ code {
   height: 0.5rem;
   width: 0.5rem;
   border-radius: 99px;
-  background: var(--olive);
+  background: var(--signal);
 }
 @keyframes ping {
   75%,
