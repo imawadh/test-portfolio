@@ -42,10 +42,11 @@
   /* ── SIGNAL — live / available status; one hue, so it reuses the accent ── */
   --signal: #1d4ed8;
 
-  /* ── SECTION BANDS — one cool family; adjacent sections never repeat ── */
-  --band-a: #fafbfc;
-  --band-b: #f4f6f9;
-  --band-c: #eaeef4;
+  /* ── SECTION BANDS — all one ground; the a/b/c hooks stay so variation
+     can come back without touching markup ── */
+  --band-a: #eef0f3;
+  --band-b: #eef0f3;
+  --band-c: #eef0f3;
 
   /* ── TYPE ── */
   --font-display: 'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
