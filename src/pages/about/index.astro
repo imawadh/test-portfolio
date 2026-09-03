@@ -37,7 +37,7 @@ const quickNav = [
   title="About — Awadh Kishor Singh"
   description="About Awadh Kishor Singh — Full Stack AI Developer in Bengaluru and Data Science undergraduate at IIT Madras, building production-ready web applications end-to-end, with applied ML experience and a first mobile app in progress."
 >
-  <section class="wrap pt-14 md:pt-24">
+  <section class="wrap band band-a band-lead">
     <span class="eyebrow reveal reveal-1">About</span>
     <h1 class="reveal reveal-2 mt-6 max-w-[12ch]">The person behind the commits</h1>
     <p
@@ -48,7 +48,10 @@ const quickNav = [
       traffic, and real deadlines.
     </p>
 
-    <div class="reveal reveal-3 mt-16 grid gap-12 md:grid-cols-[320px_1fr] md:items-start md:gap-16">
+  </section>
+
+  <section class="wrap band band-b">
+    <div class="reveal reveal-3 grid gap-12 md:grid-cols-[320px_1fr] md:items-start md:gap-16">
       <!-- Portrait plate -->
       <figure class="plate md:sticky md:top-28">
         <img
@@ -115,8 +118,11 @@ const quickNav = [
       </div>
     </div>
 
+  </section>
+
+  <section class="wrap band band-c">
     <!-- Principles -->
-    <div class="reveal reveal-4 mt-24">
+    <div class="reveal reveal-4">
       <div class="section-head">
         <div>
           <span class="section-no">01</span>
@@ -138,8 +144,11 @@ const quickNav = [
       </div>
     </div>
 
+  </section>
+
+  <section class="wrap band band-a">
     <!-- Quick nav -->
-    <div class="mt-20 flex flex-wrap gap-3">
+    <div class="flex flex-wrap gap-3">
       {quickNav.map((n) => <a href={n.href} class="btn btn-ghost">{n.label}</a>)}
     </div>
   </section>

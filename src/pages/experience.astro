@@ -78,7 +78,7 @@ const experiences = [
   title="Experience & Education — Awadh Kishor Singh"
   description="Work experience and education of Awadh Kishor Singh — Full Stack Developer Intern at IAVerse, Full Stack AI Engineer at KaiKa AI, freelance work for SRS Classes, and a BS in Data Science at IIT Madras."
 >
-  <section class="wrap pt-14 md:pt-24">
+  <section class="wrap band band-a band-lead">
     <span class="eyebrow reveal reveal-1">Experience</span>
     <h1 class="reveal reveal-2 mt-6 max-w-[12ch]">A record of shipped work</h1>
     <p
@@ -104,7 +104,10 @@ const experiences = [
       </a>
     </div>
 
-    <div class="reveal reveal-4 mt-14 flex flex-col gap-12">
+  </section>
+
+  <section class="wrap band band-b">
+    <div class="reveal reveal-4 flex flex-col gap-12">
       {
         experiences.map((exp) => (
           <TimelineItem
@@ -121,9 +124,12 @@ const experiences = [
       }
     </div>
 
+  </section>
+
+  <section class="wrap band band-c">
     <!-- Resume CTA -->
     <div
-      class="mt-20 flex flex-col gap-6 border-t border-[var(--fg)] pt-10 md:flex-row md:items-end md:justify-between"
+      class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
     >
       <div>
         <span class="eyebrow">Résumé</span>

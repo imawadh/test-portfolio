@@ -22,7 +22,7 @@
 
 :root {
   /* ── SURFACES ── */
-  --bg: #f7f8f9;
+  --bg: #ffffff;
   --bg-2: #eef0f2;
   --surface: #ffffff;
   --surface-2: #f2f4f5;
@@ -41,6 +41,11 @@
 
   /* ── SIGNAL — live / available status; one hue, so it reuses the accent ── */
   --signal: #1d4ed8;
+
+  /* ── SECTION BANDS — one cool family; adjacent sections never repeat ── */
+  --band-a: #ffffff;
+  --band-b: #f6f8fb;
+  --band-c: #edf1f7;
 
   /* ── TYPE ── */
   --font-display: 'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
@@ -183,6 +188,46 @@ code {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+}
+
+/* ── SECTION BAND — full-bleed ground behind a .wrap section ── */
+.band {
+  position: relative;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+@media (min-width: 768px) {
+  .band {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+}
+/* Bleeds past the centred .wrap to the viewport edge. Sits at z-index -1, so
+   it paints over the body wash and under the section's own content. */
+.band::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+  border-top: 1px solid var(--border);
+  background: var(--band, transparent);
+}
+/* First band on a page — the nav's own rule already closes it off. */
+.band-lead::before {
+  border-top: 0;
+}
+.band-a {
+  --band: var(--band-a);
+}
+.band-b {
+  --band: var(--band-b);
+}
+.band-c {
+  --band: var(--band-c);
 }
 
 /* Hairline divider — the workhorse of the whole layout. */
@@ -447,7 +492,7 @@ code {
 /* ── PLATE — framed photo, magazine style ── */
 .plate {
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--surface-2);
   padding: 0.5rem;
   border-radius: var(--radius);
 }
