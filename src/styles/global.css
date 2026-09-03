@@ -22,12 +22,12 @@
 
 :root {
   /* ── SURFACES ── */
-  --bg: #ffffff;
-  --bg-2: #eef0f2;
-  --surface: #ffffff;
-  --surface-2: #f2f4f5;
-  --border: #e0e3e6;
-  --border-bright: #c3c8ce;
+  --bg: #fafbfc;
+  --bg-2: #e9ecf0;
+  --surface: #fdfdfd;
+  --surface-2: #f0f2f5;
+  --border: #dee2e7;
+  --border-bright: #c1c7ce;
 
   /* ── INK ── */
   --fg: #14161a;
@@ -43,9 +43,9 @@
   --signal: #1d4ed8;
 
   /* ── SECTION BANDS — one cool family; adjacent sections never repeat ── */
-  --band-a: #ffffff;
-  --band-b: #f6f8fb;
-  --band-c: #edf1f7;
+  --band-a: #fafbfc;
+  --band-b: #f4f6f9;
+  --band-c: #eaeef4;
 
   /* ── TYPE ── */
   --font-display: 'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
@@ -90,7 +90,7 @@ body::before {
 
 ::selection {
   background: var(--accent);
-  color: #fff;
+  color: var(--bg);
 }
 
 /* ── SCROLLBAR ── */
@@ -420,12 +420,12 @@ code {
 .btn-primary {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--bg);
 }
 .btn-primary:hover {
   background: var(--accent-2);
   border-color: var(--accent-2);
-  color: #fff;
+  color: var(--bg);
 }
 .btn-ghost {
   border-color: var(--border-bright);
